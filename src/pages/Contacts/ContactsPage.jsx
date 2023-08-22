@@ -3,7 +3,7 @@ import React from 'react';
 import { Filter } from 'components/Filter/Filter';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchContactsThunk } from 'redux/operations';
+import { fetchContactsThunk } from 'redux/contactsSlice/operations';
 import { selectLoader } from 'redux/selectors';
 import { Loader } from 'components/Loader/Loader';
 import { FormData } from 'components/Form/FormData';

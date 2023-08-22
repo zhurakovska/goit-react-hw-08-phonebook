@@ -17,6 +17,7 @@ const slice = createSlice({
     token: '',
     error: '',
     isLoggedIn: false,
+    isRefresh: false,
   },
   extraReducers: builder => {
     builder
@@ -30,6 +31,7 @@ const slice = createSlice({
         state.user.name = action.payload.name;
         state.user.email = action.payload.email;
         state.isLoggedIn = true;
+        state.isRefresh = false;
       })
       .addCase(loginThunk.fulfilled, (state, action) => {
         state.user.name = action.payload.user.name;
@@ -44,6 +46,12 @@ const slice = createSlice({
         };
         state.token = '';
         state.isLoggedIn = '';
+      })
+      .addCase(refreshThunk.pending, (state, { payload }) => {
+        state.isRefresh = true;
+      })
+      .addCase(refreshThunk.rejected, (state, { payload }) => {
+        state.isRefresh = false;
       });
   },
 });

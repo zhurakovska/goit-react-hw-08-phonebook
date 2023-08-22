@@ -3,7 +3,7 @@ import { Form, Label, Input, Button } from './Form.styled';
 
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
-import { addContactsThunk } from 'redux/operations';
+import { addContactsThunk } from 'redux/contactsSlice/operations';
 import { selectContacts } from 'redux/selectors';
 
 const INITIAL_STATE = {

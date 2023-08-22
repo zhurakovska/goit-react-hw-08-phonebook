@@ -13,7 +13,7 @@ import {
 import storage from 'redux-persist/lib/storage';
 import { userReducer } from './Auth/authSlice';
 //імпортуємо редьюсери
-import { contactsReducer } from './contactsSlice';
+import { contactsReducer } from './contactsSlice/contactsSlice';
 
 const persistConfig = {
   key: 'root',
