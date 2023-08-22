@@ -40,7 +40,7 @@ export const Register = () => {
             name="name"
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-            placeholder="Enter your login/name..."
+            placeholder="Enter your name..."
             autoFocus
             onChange={e => setName(e.target.value)}
           ></InputReg>
