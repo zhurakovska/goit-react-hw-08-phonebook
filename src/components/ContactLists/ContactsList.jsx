@@ -10,7 +10,7 @@ import {
 } from 'components/Form/Form.styled';
 import { useSelector } from 'react-redux';
 
-export const Contacts = () => {
+export const ContactsList = () => {
   //Використовуємо useSelector щоб отримати  дані з редакса
   const contacts = useSelector(selectContacts);
   console.log(contacts);
