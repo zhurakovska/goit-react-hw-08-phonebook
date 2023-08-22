@@ -8,7 +8,7 @@ import { selectLoader } from 'redux/selectors';
 import { Loader } from 'components/Loader/Loader';
 import { FormData } from 'components/Form/FormData';
 import { ContactsList } from 'components/ContactLists/ContactsList';
-import { Container } from 'components/Form/Form.styled';
+import { Container, StyledWrapper } from 'components/Form/Form.styled';
 import { Title } from 'components/Form/Form.styled';
 
 export const ContactsPage = () => {
@@ -19,13 +19,15 @@ export const ContactsPage = () => {
     dispatch(fetchContactsThunk());
   }, [dispatch]);
   return (
-    <Container>
-      <Title>Phonebook</Title>
-      <FormData />
+    <StyledWrapper>
+      <Container>
+        <Title>Phonebook</Title>
+        <FormData />
 
-      <h2>Contacts</h2>
-      <Filter />
-      {loading ? <Loader /> : <ContactsList />}
-    </Container>
+        <h2>Contacts</h2>
+        <Filter />
+        {loading ? <Loader /> : <ContactsList />}
+      </Container>
+    </StyledWrapper>
   );
 };

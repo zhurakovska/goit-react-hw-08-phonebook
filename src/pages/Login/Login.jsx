@@ -1,3 +1,11 @@
+import {
+  ButtonReg,
+  FormContainer,
+  FormStyled,
+  InputReg,
+  LabelReg,
+  TitleRegister,
+} from 'pages/Register/Register.styled';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { loginThunk } from 'redux/Auth/operations';
@@ -16,12 +24,12 @@ export const Login = () => {
 
   return (
     <>
-      <div>
-        <h1>Login</h1>
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="email">
+      <FormContainer>
+        <FormStyled onSubmit={handleSubmit}>
+          <TitleRegister>Login</TitleRegister>
+          <LabelReg htmlFor="email">
             Email
-            <input
+            <InputReg
               value={email}
               type="email"
               name="email"
@@ -30,11 +38,11 @@ export const Login = () => {
               placeholder="Enter your email..."
               autoFocus
               onChange={e => setEmail(e.target.value)}
-            ></input>
-          </label>
-          <label htmlFor="password">
+            ></InputReg>
+          </LabelReg>
+          <LabelReg htmlFor="password">
             Password
-            <input
+            <InputReg
               value={password}
               type="password"
               name="password"
@@ -43,11 +51,11 @@ export const Login = () => {
               placeholder="Enter your password..."
               autoFocus
               onChange={e => setPassword(e.target.value)}
-            ></input>
-          </label>
-          <button type="submit">LOGIN</button>
-        </form>
-      </div>
+            ></InputReg>
+          </LabelReg>
+          <ButtonReg type="submit">LOGIN</ButtonReg>
+        </FormStyled>
+      </FormContainer>
     </>
   );
 };

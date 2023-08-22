@@ -2,6 +2,14 @@ import React from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { registerThunk } from 'redux/Auth/operations';
+import {
+  ButtonReg,
+  FormStyled,
+  FormContainer,
+  InputReg,
+  LabelReg,
+  TitleRegister,
+} from './Register.styled';
 
 export const Register = () => {
   const [name, setName] = useState('');
@@ -16,11 +24,12 @@ export const Register = () => {
     dispatch(registerThunk(credentials));
   };
   return (
-    <div>
-      <h1>Create account </h1>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">
-          <input
+    <FormContainer>
+      <FormStyled onSubmit={handleSubmit}>
+        <TitleRegister>Create account </TitleRegister>
+        <LabelReg htmlFor="name">
+          Name
+          <InputReg
             value={name}
             id="name"
             type="text"
@@ -30,12 +39,12 @@ export const Register = () => {
             placeholder="Enter your login/name..."
             autoFocus
             onChange={e => setName(e.target.value)}
-          ></input>
-        </label>
+          ></InputReg>
+        </LabelReg>
 
-        <label htmlFor="email">
+        <LabelReg htmlFor="email">
           Email
-          <input
+          <InputReg
             value={email}
             id="email"
             type="text"
@@ -43,12 +52,12 @@ export const Register = () => {
             placeholder="Enter your email..."
             autoFocus
             onChange={e => setEmail(e.target.value)}
-          ></input>
-        </label>
+          ></InputReg>
+        </LabelReg>
 
-        <label htmlFor="password">
+        <LabelReg htmlFor="password">
           Password
-          <input
+          <InputReg
             value={password}
             id="password"
             type="password"
@@ -58,10 +67,10 @@ export const Register = () => {
             placeholder="Enter your password..."
             autoFocus
             onChange={e => setPassword(e.target.value)}
-          ></input>
-        </label>
-        <button>Register</button>
-      </form>
-    </div>
+          ></InputReg>
+        </LabelReg>
+        <ButtonReg>Register</ButtonReg>
+      </FormStyled>
+    </FormContainer>
   );
 };

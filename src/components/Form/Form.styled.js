@@ -1,22 +1,31 @@
 import { styled } from 'styled-components';
 
 export const Container = styled.div`
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  padding: 20px;
-  width: 300px;
-  margin: 0 auto;
-  margin-top: 150px;
+`;
+
+export const StyledWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: url('https://public.mishka.travel/images/mini/7ac6afb462a0e76.jpg')
+    center/cover;
 `;
 
 export const Title = styled.h1`
-  font-size: 24px;
-  color: #333;
+  color: #003d73;
   margin-bottom: 20px;
+  font-size: 40px;
 `;
 
 export const Form = styled.form`
@@ -27,9 +36,11 @@ export const Form = styled.form`
 `;
 
 export const Label = styled.label`
-  font-size: 16px;
-  color: #555;
+  color: #0878a4;
+  font-weight: bold;
   margin-bottom: 10px;
+  font-size: 20px;
+  text-transform: uppercase;
 `;
 
 export const Input = styled.input`
@@ -41,12 +52,18 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  padding: 8px 16px;
-  background-color: #007bff;
-  color: #fff;
+  background-color: #0878a4;
+  color: white;
   border: none;
-  border-radius: 4px;
+  padding: 10px 20px;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 20px;
+
+  &:hover {
+    background-color: #003d73;
+  }
 `;
 
 export const FilterInput = styled.input`
@@ -79,4 +96,9 @@ export const DeleteButton = styled.button`
   border-radius: 4px;
   cursor: pointer;
   margin-left: 20px;
+  font-size: 20px;
+  padding: 10px 20px;
+  &:hover {
+    background-color: #c05640;
+  }
 `;
