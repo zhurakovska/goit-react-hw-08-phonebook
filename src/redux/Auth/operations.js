@@ -57,3 +57,20 @@ export const logoutThunk = createAsyncThunk(
     }
   }
 );
+
+export const refreshThunk = createAsyncThunk(
+  'auth/refresh',
+  async (_, { rejectWithValue, getState }) => {
+    const savedToken = getState().auth.token;
+    if (!savedToken) {
+      return rejectWithValue('Token is not found');
+    }
+    try {
+      setToken(savedToken);
+      const { data } = await API.get('users/me');
+      return data;
+    } catch (error) {
+      return rejectWithValue(error.message);
+    }
+  }
+);

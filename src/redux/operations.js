@@ -1,12 +1,5 @@
-//https://64de2bf3825d19d9bfb23b1a.mockapi.io/contacts
-//https://64de2bf3825d19d9bfb23b1a.mockapi.io/contacts/:endpoint
-
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
-
-export const API = axios.create({
-  baseURL: 'https://64de2bf3825d19d9bfb23b1a.mockapi.io/contacts',
-});
+import { API } from './Auth/operations';
 
 export const fetchContactsThunk = createAsyncThunk(
   'contacts/fetchAll',
