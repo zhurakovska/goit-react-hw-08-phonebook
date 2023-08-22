@@ -3,16 +3,19 @@ import styled from 'styled-components';
 export const Container = styled.div`
   text-align: center;
   padding: 20px;
-  background: url('https://public.mishka.travel/images/mini/7ac6afb462a0e76.jpg')
+  background: url('https://s.zagranitsa.com/images/articles/2198/870x486/8a7b6b4442fe4b60acd85d6131709c96.jpg?1448881793')
     center/cover;
 `;
 
 export const Title = styled.h1`
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 28px;
+  color: #f7faff;
+  font-size: 34px;
   margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-shadow: -1px -1px 0 #003d73, 1px -1px 0 #003d73, -1px 1px 0 #003d73,
+    1px 1px 0 #003d73;
 `;
-
 export const TextImageContainer = styled.div`
   display: flex;
   align-items: center;

@@ -7,7 +7,7 @@ export const FormContainer = styled.div`
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: url('https://public.mishka.travel/images/mini/7ac6afb462a0e76.jpg')
+  background: url('https://s.zagranitsa.com/images/articles/2198/870x486/8a7b6b4442fe4b60acd85d6131709c96.jpg?1448881793')
     center/cover;
 `;
 
