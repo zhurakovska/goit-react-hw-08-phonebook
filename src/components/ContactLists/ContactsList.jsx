@@ -7,6 +7,8 @@ import {
   ContactList,
   ContactItem,
   DeleteButton,
+  ContactName,
+  ContactNumber,
 } from 'components/Form/Form.styled';
 import { useSelector } from 'react-redux';
 
@@ -33,7 +35,8 @@ export const ContactsList = () => {
     <ContactList>
       {filteredContacts.map(({ id, name, number }) => (
         <ContactItem key={id}>
-          {name} {number}
+          <ContactName>{name}</ContactName>
+          <ContactNumber>{number}</ContactNumber>
           <DeleteButton onClick={() => handleDelete(id)}>Delete</DeleteButton>
         </ContactItem>
       ))}

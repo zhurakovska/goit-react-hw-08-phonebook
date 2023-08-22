@@ -1,4 +1,6 @@
 import {
+  AuthParagraph,
+  AuthParagraphLink,
   ButtonReg,
   FormContainer,
   FormStyled,
@@ -8,11 +10,13 @@ import {
 } from 'pages/Register/Register.styled';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
 import { loginThunk } from 'redux/Auth/operations';
 
 export const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const dispatch = useDispatch();
 
@@ -54,6 +58,17 @@ export const Login = () => {
             ></InputReg>
           </LabelReg>
           <ButtonReg type="submit">LOGIN</ButtonReg>
+          <AuthParagraph>
+            Don't have an account yet?
+            <AuthParagraphLink
+              to="/reg"
+              onClick={() => {
+                navigate('/reg');
+              }}
+            >
+              Sign up now
+            </AuthParagraphLink>
+          </AuthParagraph>
         </FormStyled>
       </FormContainer>
     </>

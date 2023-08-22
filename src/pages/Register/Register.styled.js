@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const FormContainer = styled.div`
@@ -57,5 +58,23 @@ export const ButtonReg = styled.button`
 
   &:hover {
     background-color: #0878a4;
+  }
+`;
+
+export const AuthParagraph = styled.p`
+  font-size: 18px;
+  color: #003d73;
+  margin-top: 20px;
+`;
+
+export const AuthParagraphLink = styled(NavLink)`
+  text-decoration: underline;
+  color: #0878a4;
+  margin-left: 5px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #c05640;
   }
 `;

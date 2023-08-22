@@ -17,7 +17,6 @@ export const TextImageContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 20px;
 
   .emoji {
     margin-left: 5px;
@@ -29,7 +28,7 @@ export const TextImageContainer = styled.div`
     height: 250px;
     border-radius: 50%;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    margin-left: 20px;
+    margin: 20px;
     transition: transform 0.3s ease;
   }
 

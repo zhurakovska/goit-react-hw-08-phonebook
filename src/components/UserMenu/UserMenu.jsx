@@ -1,3 +1,4 @@
+import { StyledUser, UserMenuContainer } from 'components/Layout/Layout.styled';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { logoutThunk } from 'redux/Auth/operations';
@@ -12,9 +13,9 @@ export const UserMenu = () => {
   };
 
   return (
-    <div>
-      <p>{name}</p>
+    <UserMenuContainer>
+      <StyledUser>{name}</StyledUser>
       <button onClick={handleLogout}>Logout</button>
-    </div>
+    </UserMenuContainer>
   );
 };

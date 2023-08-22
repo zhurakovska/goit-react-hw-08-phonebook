@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { registerThunk } from 'redux/Auth/operations';
 import {
   ButtonReg,
@@ -9,12 +10,15 @@ import {
   InputReg,
   LabelReg,
   TitleRegister,
+  AuthParagraph,
+  AuthParagraphLink,
 } from './Register.styled';
 
 export const Register = () => {
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
+  const navigate = useNavigate();
 
   const dispatch = useDispatch();
 
@@ -70,6 +74,17 @@ export const Register = () => {
           ></InputReg>
         </LabelReg>
         <ButtonReg>Register</ButtonReg>
+        <AuthParagraph>
+          Do you have an account already?
+          <AuthParagraphLink
+            to="/login"
+            onClick={() => {
+              navigate('/login');
+            }}
+          >
+            Sign in
+          </AuthParagraphLink>
+        </AuthParagraph>
       </FormStyled>
     </FormContainer>
   );

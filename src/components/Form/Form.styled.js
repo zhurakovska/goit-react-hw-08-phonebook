@@ -28,6 +28,12 @@ export const Title = styled.h1`
   font-size: 40px;
 `;
 
+export const Titleh2 = styled.h2`
+  color: #003d73;
+  margin-bottom: 20px;
+  font-size: 30px;
+`;
+
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
@@ -41,6 +47,9 @@ export const Label = styled.label`
   margin-bottom: 10px;
   font-size: 20px;
   text-transform: uppercase;
+  color: #0878a4;
+  font-weight: bold;
+  margin-bottom: 5px;
 `;
 
 export const Input = styled.input`
@@ -49,6 +58,7 @@ export const Input = styled.input`
   border-radius: 4px;
   margin-bottom: 10px;
   margin-left: 20px;
+  width: 176px;
 `;
 
 export const Button = styled.button`
@@ -59,7 +69,8 @@ export const Button = styled.button`
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-size: 20px;
+  font-size: 18px;
+  margin-top: 20px;
 
   &:hover {
     background-color: #003d73;
@@ -71,12 +82,14 @@ export const FilterInput = styled.input`
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-bottom: 10px;
+  width: 230px;
 `;
 
 export const ContactList = styled.ul`
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-top: 20px;
 `;
 
 export const ContactItem = styled.li`
@@ -89,16 +102,26 @@ export const ContactItem = styled.li`
 `;
 
 export const DeleteButton = styled.button`
-  padding: 8px 16px;
   background-color: #dc3545;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   margin-left: 20px;
-  font-size: 20px;
+  font-size: 16px;
   padding: 10px 20px;
   &:hover {
     background-color: #c05640;
   }
+`;
+
+export const ContactName = styled.span`
+  margin-right: 10px;
+  color: #003d73;
+  font-weight: bold;
+  font-size: 18px;
+`;
+
+export const ContactNumber = styled.span`
+  color: #0878a4;
 `;

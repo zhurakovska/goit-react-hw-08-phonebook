@@ -8,8 +8,13 @@ import { selectLoader } from 'redux/selectors';
 import { Loader } from 'components/Loader/Loader';
 import { FormData } from 'components/Form/FormData';
 import { ContactsList } from 'components/ContactLists/ContactsList';
-import { Container, StyledWrapper } from 'components/Form/Form.styled';
-import { Title } from 'components/Form/Form.styled';
+
+import {
+  Title,
+  Titleh2,
+  Container,
+  StyledWrapper,
+} from 'components/Form/Form.styled';
 
 export const ContactsPage = () => {
   const dispatch = useDispatch();
@@ -24,7 +29,7 @@ export const ContactsPage = () => {
         <Title>Phonebook</Title>
         <FormData />
 
-        <h2>Contacts</h2>
+        <Titleh2>Contacts</Titleh2>
         <Filter />
         {loading ? <Loader /> : <ContactsList />}
       </Container>

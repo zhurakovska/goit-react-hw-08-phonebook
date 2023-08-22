@@ -1,16 +1,17 @@
 import { Navbar } from 'components/Navbar/Navbar';
 import React from 'react';
 import { Outlet } from 'react-router-dom';
+import { HeaderContainer, LayoutContainer } from './Layout.styled';
 
 export const Layout = () => {
   return (
-    <div>
-      <header>
+    <LayoutContainer>
+      <HeaderContainer>
         <Navbar />
-      </header>
+      </HeaderContainer>
       <main>
         <Outlet />
       </main>
-    </div>
+    </LayoutContainer>
   );
 };

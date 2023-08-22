@@ -1,23 +1,27 @@
+import {
+  AuthLinksContainer,
+  Nav,
+  NavLinkStyled,
+} from 'components/Layout/Layout.styled';
 import { UserMenu } from 'components/UserMenu/UserMenu';
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { selectIsLoggedIn } from 'redux/selectors';
 
 export const Navbar = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   return (
-    <nav>
-      <Link to="/">Home</Link>
-      {isLoggedIn && <Link to="/contacts">Contacts</Link>}
+    <Nav>
+      <NavLinkStyled to="/">Home</NavLinkStyled>
+      {isLoggedIn && <NavLinkStyled to="/contacts">Contacts</NavLinkStyled>}
       {!isLoggedIn ? (
-        <div>
-          <Link to="/reg">Register</Link>
-          <Link to="/login">Login</Link>
-        </div>
+        <AuthLinksContainer>
+          <NavLinkStyled to="/reg">Register</NavLinkStyled>
+          <NavLinkStyled to="/login">Login</NavLinkStyled>
+        </AuthLinksContainer>
       ) : (
         <UserMenu />
       )}
-    </nav>
+    </Nav>
   );
 };
