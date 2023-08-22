@@ -59,6 +59,7 @@ export const Input = styled.input`
   margin-bottom: 10px;
   margin-left: 20px;
   width: 176px;
+  border: 1px solid #1ecfd6;
 `;
 
 export const Button = styled.button`
@@ -83,6 +84,7 @@ export const FilterInput = styled.input`
   border-radius: 4px;
   margin-bottom: 10px;
   width: 230px;
+  border: 1px solid #1ecfd6;
 `;
 
 export const ContactList = styled.ul`
