@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 import { selectIsLoggedIn } from 'redux/selectors';
@@ -13,5 +13,5 @@ export const PublicRoute = ({ children }) => {
 };
 
 PublicRoute.propTypes = {
-  children: propTypes.element.isRequired,
+  children: PropTypes.element.isRequired,
 };
